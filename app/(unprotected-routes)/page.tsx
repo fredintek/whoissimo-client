@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div className="flex flex-row gap-4 max-[408px]:flex-col">
               <button className="py-4 px-6 bg-[#030303] text-white md:bg-[#FDFDFD] md:text-black text-[16px] leading-6 font-bold rounded-[10px] flex-1">
-                <p className="">Contact The Artist</p>
+                <p className="">Contact SIMO</p>
               </button>
               <button
                 onClick={() => setOpenVideo(true)}
