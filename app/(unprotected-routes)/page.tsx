@@ -70,12 +70,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-row gap-4 max-[408px]:flex-col">
-              <Link
+              <a
                 href="mailto:Okorosimon11@yahoo.com?subject=Contact%20SIMO&body=Hello%20SIMO,"
                 className="py-4 px-6 bg-[#030303] text-white md:bg-[#FDFDFD] md:text-black text-[16px] leading-6 font-bold rounded-[10px] flex-1 flex justify-center items-center"
               >
                 <p className="">Contact SIMO</p>
-              </Link>
+              </a>
               <button
                 onClick={() => setOpenVideo(true)}
                 className="py-4 px-6 text-[#030303] border-[#030303] bg-transparent border-2 md:border-[#FDFDFD] md:text-white text-[16px] leading-6 font-bold rounded-[10px] flex-1 flex items-center gap-2 justify-center"
