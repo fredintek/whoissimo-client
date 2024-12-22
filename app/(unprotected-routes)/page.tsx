@@ -35,7 +35,7 @@ export default function Home() {
           <img
             src="/images/simo-nav-logo.png"
             alt="nav-logo"
-            className="block h-[34px] w-[80.75px] md:h-[40px] md:w-[102px] object-cover"
+            className="block h-[34px] w-[80.75px] md:h-[40px] md:w-[102px] object-contain"
           />
         </div>
       </nav>
