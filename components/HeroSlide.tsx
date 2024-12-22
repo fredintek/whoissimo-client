@@ -28,7 +28,7 @@ const heroSlides = [
 const HeroSlide = (props: Props) => {
   return (
     <Swiper
-      // loop={true}
+      loop={true}
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
