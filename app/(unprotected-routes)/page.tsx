@@ -1,17 +1,11 @@
-"use client";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/pagination";
-
-import { Autoplay, Pagination } from "swiper/modules";
+import HeroSlide from "@/components/HeroSlide";
 
 export default function Home() {
   return (
     <main className="w-screen flex-1">
       <nav className="">
-        <div className="container flex justify-center items-center py-6">
+        <div className="container flex justify-center items-center py-4 md:py-6">
           <img
             src="/images/simo-nav-logo.png"
             alt="nav-logo"
@@ -19,7 +13,7 @@ export default function Home() {
           />
         </div>
       </nav>
-      <section className="min-h-[calc(100vh-88px)] pb-6">
+      <section className="min-h-[calc(100vh-66px)] md:min-h-[calc(100vh-88px)] pb-6">
         <div className="container flex flex-col-reverse md:flex-row gap-4 h-full md:h-[646px] md:rounded-[50px] md:bg-hero-bg md:bg-no-repeat md:bg-center md:px-5 md:py-[40px] md:items-center">
           {/* LEFT */}
           <div className="md:flex-1 flex flex-col md:justify-center">
@@ -52,34 +46,7 @@ export default function Home() {
           </div>
 
           {/* RIGHT */}
-          <Swiper
-            loop={true}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination, Autoplay]}
-            className="mySwiper w-[100%] md:w-[50%] h-[322px] md:h-full md:bg-white md:rounded-[20px] !py-6"
-          >
-            <SwiperSlide className="md:!px-3">
-              <img
-                className="w-full h-full object-fill rounded-[8px] md:rounded-none"
-                src="/images/hero-img1.png"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide className="md:!px-3">
-              <img
-                className="w-full h-full object-fill rounded-[8px] md:rounded-none"
-                src="/images/hero-img1.png"
-                alt=""
-              />
-            </SwiperSlide>
-          </Swiper>
+          <HeroSlide />
         </div>
       </section>
     </main>
