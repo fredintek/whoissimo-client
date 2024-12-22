@@ -21,11 +21,13 @@ export default function Home() {
             className="max-w-[600px] w-full h-[400px] md:h-[646px] relative z-40"
           >
             <video
-              className="absolute top-0 left-0 w-full h-full object-fill"
-              src="/videos/about-simo.mp4"
+              className="absolute top-0 left-0 w-full h-full object-fill rounded-[20px]"
               autoPlay
               loop
-            ></video>
+            >
+              <source src="/videos/about-simo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       )}
