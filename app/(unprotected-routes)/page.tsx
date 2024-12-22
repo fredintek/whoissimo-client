@@ -1,9 +1,35 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import HeroSlide from "@/components/HeroSlide";
+import { YoutubeFilled } from "@ant-design/icons";
 
 export default function Home() {
+  const [openVideo, setOpenVideo] = useState(false);
+
   return (
-    <main className="w-screen flex-1">
+    <main className="w-screen flex-1 bg-tunnel-bg bg-center bg-no-repeat relative">
+      {/* ABOUT SIMO VIDEO */}
+      {openVideo && (
+        <div
+          onClick={() => setOpenVideo(false)}
+          className="absolute top-0 left-0 w-full h-full z-30 backdrop-blur-sm bg-black/20 px-4 grid place-items-center"
+        >
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            className="max-w-[600px] w-full h-[400px] md:h-[646px] relative z-40"
+          >
+            <video
+              className="absolute top-0 left-0 w-full h-full object-fill"
+              src="/videos/about-simo.mp4"
+              autoPlay
+              loop
+            ></video>
+          </div>
+        </div>
+      )}
+
       <nav className="">
         <div className="container flex justify-center items-center py-4 md:py-6">
           <img
@@ -40,9 +66,18 @@ export default function Home() {
                 </span>
               </p>
             </div>
-            <button className="py-4 px-6 bg-[#030303] text-white md:bg-[#FDFDFD] md:text-black text-[16px] leading-6 font-bold uppercase rounded-[10px] md:w-fit">
-              <p>Contact the artist</p>
-            </button>
+            <div className="flex flex-row gap-4 max-[408px]:flex-col">
+              <button className="py-4 px-6 bg-[#030303] text-white md:bg-[#FDFDFD] md:text-black text-[16px] leading-6 font-bold rounded-[10px] flex-1">
+                <p className="">Contact The Artist</p>
+              </button>
+              <button
+                onClick={() => setOpenVideo(true)}
+                className="py-4 px-6 text-[#030303] border-[#030303] bg-transparent border-2 md:border-[#FDFDFD] md:text-white text-[16px] leading-6 font-bold rounded-[10px] flex-1 flex items-center gap-2 justify-center"
+              >
+                <YoutubeFilled className="text-2xl" />
+                <p className="">About SIMO</p>
+              </button>
+            </div>
           </div>
 
           {/* RIGHT */}

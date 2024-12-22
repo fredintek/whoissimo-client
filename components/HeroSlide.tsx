@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Autoplay, Pagination } from "swiper/modules";
+import Image from "next/image";
 
 type Props = {};
 
@@ -27,7 +28,7 @@ const heroSlides = [
 const HeroSlide = (props: Props) => {
   return (
     <Swiper
-      loop={true}
+      // loop={true}
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
@@ -41,11 +42,14 @@ const HeroSlide = (props: Props) => {
     >
       {heroSlides.map((slide, index) => (
         <SwiperSlide key={index} className="md:!px-6">
-          <img
-            className="w-full h-full object-fill rounded-[8px] md:rounded-none"
-            src={slide.src}
-            alt={slide.alt}
-          />
+          <div className="relative w-full h-full">
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              className="rounded-[8px] md:rounded-[20px]"
+              fill
+            />
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>

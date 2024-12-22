@@ -18,6 +18,7 @@ export default {
       },
       backgroundImage: {
         "hero-bg": "url('/images/simo-art-bg-blur.png')",
+        "tunnel-bg": "url('/images/Tunnel.png')",
       },
     },
   },
